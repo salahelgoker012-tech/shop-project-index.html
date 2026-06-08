@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELGOKER STORE</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>🛒 ELGOKER STORE</h1>
+
+<!-- السلة -->
+<div class="cart-box">
+
+<h3>السلة</h3>
+
+<div id="cart"></div>
+
+<hr>
+
+<p><b>الإجمالي: <span id="total">0</span> ج.م</b></p>
+
+<button onclick="openOrder()" class="btn-blue">
+حجز الأوردر 📦
+</button>
+
+</div>
+
+<!-- المنتجات -->
+<div class="products">
+
+<div class="product">
+<img src="iphone17.jpg">
+<h3>iPhone 17</h3>
+<p>95000 ج.م</p>
+<button onclick="add('iPhone 17',95000)">➕ إضافة</button>
+</div>
+
+<div class="product">
+<img src="سامسونج الترا.jpg">
+<h3>Samsung Ultra</h3>
+<p>65000 ج.م</p>
+<button onclick="add('Samsung Ultra',65000)">➕ إضافة</button>
+</div>
+
+<div class="product">
+<img src="لاب توب.jpg">
+<h3>Laptop</h3>
+<p>115000 ج.م</p>
+<button onclick="add('Laptop',115000)">➕ إضافة</button>
+</div>
+
+</div>
+
+<!-- نافذة الحجز -->
+<div id="checkout" class="overlay">
+
+<div class="box">
+
+<h2>📦 تأكيد الأوردر</h2>
+
+<p>الإجمالي: <span id="checkoutTotal">0</span> ج.م</p>
+
+<input id="name" placeholder="الاسم">
+<input id="phone" placeholder="رقم الهاتف">
+<input id="address" placeholder="العنوان">
+
+<button onclick="confirmWhatsApp()" class="btn-green">
+تأكيد واتساب 📲
+</button>
+
+<button onclick="sendToExcel()" class="btn-blue">
+حفظ في الإكسيل 🧾
+</button>
+
+<button onclick="closeCheckout()" class="btn-red">
+إغلاق
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
